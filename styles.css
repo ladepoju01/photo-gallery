@@ -1,0 +1,271 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+    --font-family: Arial, Helvetica, sans-serif;
+    --teal:#007d7b;
+    --black:#000000;
+    --white:#ffffff;
+}
+
+@media screen and (min-width:485px) {
+    
+    html{
+        font-family: var(--font-family);
+    }
+
+    p{
+        font-size: 1.25em;
+        margin: auto 10px;
+        line-height: 150%;
+    }
+
+    figcaption,label,input,small{
+        font-size: 1em;
+    }
+
+    nav a{
+        font-size: 1.5em;
+    }
+
+    h1{
+        font-size: 3em;
+        padding: 5px;
+        color: var(--teal);
+        text-align: center;
+        width: 100vw;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    h2{
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    body{
+        background-color: var(--black);
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: 485px;
+        line-height: 1;
+    }
+
+    main,h1{
+        background-color: var(--white);
+        /* margin:auto 20px; */
+    }
+
+    nav ul{
+        display: flex; 
+        justify-content: space-around;
+        position: relative;
+        left:35px;
+        margin: 40px;
+    }
+
+    [href="#top"] {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        border: 3px solid var(--white);
+        padding: 5px;
+    }
+
+    a{
+        font-weight: bold;
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    #about{
+        margin:20px auto;
+    }
+
+    #about>p{
+        margin-top:20px;
+        margin-bottom: 20px;
+    }
+    #gallery{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        justify-items: center;
+    }
+    #gallery h2{
+        margin:15px auto;
+    }
+
+    figcaption{
+        color: var(--white);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    figure img[alt="Iran"]~figcaption,figure img[alt="Ireland"]~figcaption{
+        position: relative;
+        top:-95%;
+    }
+
+    figure img[alt="Chile"]~figcaption,figure img[alt="Hawaii"]~figcaption,figure img[alt="Italy"]~figcaption,figure img[alt="Moab-Desert"]~figcaption{
+        position: relative;
+        top:-30px;
+    }
+
+    figure img[alt="Wyoming"]~figcaption,figure img[alt="USA"]~figcaption,figure img[alt="UK"]~figcaption,figure img[alt="Switzerland"]~figcaption,figure img[alt="Rocky-Mountains"]~figcaption,figure img[alt="Guatemala"]~figcaption{
+        position: relative;
+        top:-90%;
+    }
+
+    figure img[alt="Iran"]~figcaption,figure img[alt="Ireland"]~figcaption,figure img[alt="Italy"]~figcaption,figure img[alt="Rocky-Mountains"]~figcaption,figure img[alt="Switzerland"]~figcaption,figure img[alt="UK"]~figcaption,figure img[alt="USA"]~figcaption{
+        color: var(--black);
+    }
+
+    aside{
+        text-align: center;
+        display: grid;
+        justify-self: center;
+        gap:20px;
+        margin: 20px auto;
+    }
+
+    aside h2,aside p,label{
+    color:var(--white);
+    }
+
+
+    label,::placeholder{
+        text-transform: uppercase;
+    }
+    form{
+        display: grid;
+        width: 90%; 
+        justify-self: center;
+        gap:15px;
+        margin: 20px auto;
+    }
+
+    input{
+        padding: 10px 0;
+    }
+
+    label{
+        text-align: start;
+        position: relative;
+        left:10px;
+        top:10px;
+    }
+    ::placeholder{
+        color: var(--teal);
+        font-weight: bold;
+
+    }
+
+    input[type="submit"]{
+        background-color: var(--teal);
+        color:var(--white);
+        text-transform: uppercase;
+        border-radius: 20px;
+        width:50%;
+        justify-self: center;
+        margin-top: 15px;
+    }
+
+    footer{
+        color: var(--white);
+    }
+}
+
+@media screen and (min-width:880px) {
+    h1{
+        text-align: start;
+    }
+
+    nav ul{
+        justify-content: space-evenly;
+    }
+
+    #gallery{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    #gallery h2, #gallery p{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #gallery p{
+        justify-self: start;
+    }
+
+    form{
+        width:70vw
+    }
+
+}
+
+@media screen and (min-width:1300px) {
+    
+    nav ul{
+        justify-content: flex-end;
+        gap:15px;
+    }
+
+    #gallery{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    #gallery h2, #gallery p{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
